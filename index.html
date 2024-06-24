@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Marcos Mancia's Main Matrix</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="author" content="Marcos E. Mancia Jr.">
+	<meta name="description" content="The home page for Marcos' website">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            font-family: Georgia, 'Times New Roman', Times, serif; color: black; list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+
+    <style media="screen and (min-width:320px)">
+        .navdiv {
+            display: none;
+        }
+        .navdiv-smlscreen {
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .navbar {
+            margin-left: 10px; margin-right: 10px; margin-top: -5px; margin-bottom: -5px;
+        }
+        .logo a {
+            font-size: 1.5rem;
+        }
+        .navbutton1, .navbutton2 {
+            display: block; font-size: 1.4rem; line-height: 35px;
+        }
+        .headerDivline {
+            border-width: 0.5px; border-style: solid; height: 0.1%; margin-top: 2.5px; margin-bottom: 25px;
+        }
+        .container {
+            display: flex; flex-direction: column-reverse; align-items: center; text-align: center; margin-left: 15px; margin-right: 15px;
+        }
+        .txt h2 {
+            font-size: 1.25rem;
+        }
+        .txt p {
+            font-size: 0.9rem;
+        }
+        img {
+            width: 250px; height: 333px; border-width: 2px; border-style: solid;
+        }
+        .footerDivline {
+            border-width: 0.5px; border-style: solid; height: 0.1%; margin-top: 15px; margin-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+        }
+        footer h2 {
+            font-weight: normal; font-size: 1.1rem;
+        }
+        .contacts {
+            display: flex; justify-content: space-evenly; align-items: center;
+        }
+    </style>
+
+    <style media="screen and (min-width:768px)">
+        .navdiv-smlscreen {
+            display: none;
+        }
+        .navdiv {
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .navbar {
+            margin-left: 15px; margin-right: 15px;
+        }
+        .logo a {
+            font-size: 1.7rem;
+        }
+        .navbutton1, .navbutton2 {
+            display: inline-block; font-size: 1.6rem;
+        }
+        .navbutton1 {
+            padding-right: 25px;
+        }
+        .headerDivline {
+            margin-top: 7.5px; margin-bottom: 40px;
+        }
+        .container {
+            margin-left: 25px; margin-right: 25px;
+        }
+        .txt h2 {
+            font-size: 1.4rem;
+        }
+        .txt p {
+            font-size: 1rem;
+        }
+        img {
+            width: 400px; height: 533px; border-width: 2.5px;
+        }
+        .footerDivline {
+            margin-top: 30px; margin-bottom: 7.5px;
+        }
+        footer h2 {
+            font-size: 1.2rem;
+        }
+    </style>
+
+    <style media="screen and (min-width:1024px)">
+        .navbutton1 {
+            padding-right: 35px;
+        }
+        .headerDivline {
+            margin-bottom: 50px;
+        }
+        .container {
+            display: flex; flex-direction: row; justify-content: space-evenly; align-items: center; text-align: center;
+        }
+        .txt {
+            margin-right: 20px; margin-left: 20px;
+        }
+        .txt h2 {
+            font-size: 1.5rem;
+        }
+        .txt p {
+            font-size: 1.1rem;
+        }
+        .photo {
+            margin-left: 20px; margin-right: 20px;
+        }
+        .footerDivline {
+            margin-top: 50px;
+        }
+        footer h2{
+            font-weight: normal; font-size: 1.25rem;
+        }
+        .contacts {
+            display: flex; justify-content: space-evenly; margin-top: -10px;
+        }
+    </style>
+
+    <style media="screen and (min-width:1440px)">
+        .navbar {
+            margin-top: 15px; margin-left: 25px; margin-right: 25px;
+        }
+        .logo a {
+            font-size: 2.25rem;
+        }
+        .navbutton1, .navbutton2 {
+            font-size: 2.15rem;
+        }
+        .navbutton1 {
+            padding-right: 50px;
+        }
+        .headerDivline {
+            margin-top: 20px; margin-bottom: 100px;
+        }
+        .txt {
+            margin-left: 35px; margin-right: 25px;
+        }
+        .txt h2 {
+            font-size: 2rem;
+        }
+        .txt p {
+            font-size: 1.6rem;
+        }
+        .photo {
+            margin-right: 35px; margin-left: 25px;
+        }
+        img {
+            width: 500px; height: 666px; border-width: 3.5px;
+        }
+        .footerDivline {
+            margin-top: 100px; margin-bottom: 12.5px;
+        }
+        footer h2 {
+            font-size: 1.75rem;
+        }
+    </style>
+
+    <style media="screen and (min-width:2560px)">
+        .navbar {
+            margin-top: 50px; margin-left: 40px; margin-right: 40px;
+        }
+        .logo a {
+            font-size: 4rem;
+        }
+        .navbutton1, .navbutton2 {
+            font-size: 3.9rem;
+        }
+        .navbutton1 {
+            padding-right: 100px;
+        }
+        .headerDivline {
+            margin-top: 50px; margin-bottom: 150px;
+        }
+        .txt {
+            margin-left: 75px; margin-right: 35px;
+        }
+        .txt h2 {
+            font-size: 3.5rem;
+        }
+        .txt p {
+            font-size: 2.75rem;
+        }
+        .photo {
+            margin-right: 75px; margin-left: 35px;
+        }
+        img {
+            width: 900px; height: 1200px; border-width: 5px;
+        }
+        .footerDivline {
+            margin-bottom: 50px; margin-top: 150px;
+        }
+        footer h2 {
+            font-size: 3.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navdiv">
+                <div class="logo"><a href="#">Marcos Enrique Mancia Jr.</a></div>
+				<ul>
+					<li class="navbutton1"><a href="resume.html">Resumé</a></li>
+					<li class="navbutton2"><a href="projects.html">Projects</a></li>
+				</ul>
+            </div>
+
+            <div class="navdiv-smlscreen">
+                <div class="logo"><a href="#">M.E.M.</a></div>
+                <ul>
+                    <li class="navbutton1"><a href="resume.html">Resumé</a></li>
+                    <li class="navbutton2"><a href="projects.html">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="headerDivline"></div>
+        
+    <div class="container">
+        <div class="txt">
+            <h2>About Me</h2>
+            <p>
+                My name is Marcos Mancia, and I was born in Burbank, California. 
+				Growing up in a lively household with four siblings, I've always 
+				been surrounded by energy, creativity, and a spirit of collaboration. 
+				This environment has greatly influenced my passion for problem-solving 
+				and innovation. Currently, I am pursuing a degree in Computer 
+				Engineering at Columbia University. My academic journey has been both 
+				challenging and rewarding, providing me with a deep understanding of 
+				computer systems, electronics, and software development. At Columbia, 
+				I've had the opportunity to work on a variety of exciting projects, 
+				from designing complex circuits to developing software applications, 
+				which have honed my technical skills and sparked a keen interest in 
+				the field of embedded systems. I am eager to apply my knowledge and 
+				skills to create innovative solutions that can make a positive impact 
+				in the world. My faith as a Christian is central to my life, guiding 
+				my values and inspiring me to make meaningful contributions to society. 
+				It provides me with a strong moral foundation and motivates me to 
+				pursue excellence in all my endeavors. Looking ahead, I am enthusiastic 
+				about the future and the opportunities it holds, and I am committed to 
+				continually learning and growing both personally and professionally.</p>
+        </div>
+        <div class="photo">
+            <img src="images/familyPic.jpg" alt="Marcos Mancia with his siblings">
+        </div>
+    </div>
+
+    <div class="footerDivline"></div>
+    <footer>
+        <h2><a href="mailto:marcosmancia77@gmail.com">Email: marcosmancia77@gmail.com</a></h2>
+
+        <nav class="contacts">
+            <h2><a href="https://www.linkedin.com/in/marcos-mancia-658732292/" target="_blank" style="color: cornflowerblue">LinkedIn</a></h2>
+            <h2><a href="https://app.joinhandshake.com/stu/users/53049844" target="_blank" style="color: cornflowerblue">HandShake</a></h2>
+            <h2><a href="https://github.com/Jinnboi" target="_blank" style="color: cornflowerblue">Github</a></h2>
+        </nav>
+    </footer>
+</body>
+
+</html>
