@@ -1,446 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Marcos Mancia's Main Matrix</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="author" content="Marcos E. Mancia Jr.">
-	<meta name="description" content="The home page for Marcos' website">
+  	<title>MEM Jr. | Portfolio</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<meta charset="UTF-8">
+	<meta name="author" content="Marcos E. Mancia Jr.">
+	<meta name="description" content="The home page for Marcos' portfolio.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  	<link rel="stylesheet" href="styles.css" />
 
-    <style>
-        * {
-            list-style: none;
-        }
-        body {
-            background-color: #7f9ab8;
-        }
-        a {
-            text-decoration: none;
-        }
-        hr {
-            border-top: 3px solid #174785;
-        }
-    </style>
-
-    <!--
-    <style media="screen and (min-width:320px)">
-        .lrg-screen {
-            display: none;
-        }
-        .logodiv {
-            background-color: #174785; display: flex; justify-content: center; align-items: center; padding-left: 10px; padding-right: 10px; 
-            padding-top: 10px; padding-bottom: 10px;
-        }
-        .logodiv a {
-            color: white; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 500; font-size: 1.2rem;
-        }
-        .logodiv p {
-            color: white; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .adiv {
-            background-color: #75b2dd; display: flex; justify-content: space-evenly; align-items: center; padding-top: 7.5px; padding-bottom: 7.5px;
-        }
-        .adiv a {
-            color: white; font-size: 1.1rem; font-weight: 500;
-        }
-        .aboutme {
-            background-color: white; padding-top: 1px;
-        }
-    </style>
-    -->
-
-    <style media="screen and (min-width:320px)">
-	.lrg-screen {
-		display: none;
-	}
-	.editDiv {
-		display: block; padding-top: 350px; padding-bottom: 350px; background-color: white;
-	}
-	.editH1 {
-		text-align: center;
-	}
-    </style>
-
-    <style media="screen and (min-width:1024px)">
-        .sml-screen {
-            display: none;
-        }
-        .lrg-screen {
-            display: contents;
-        }
-        .navbar {
-            background-color: #174785; padding-top: 10px; padding-bottom: 10px;
-        }
-        .navdiv {
-            display: flex; justify-content: space-between; align-items: center; margin-left: 30px; margin-right: 30px;
-        }
-        .navdiv a {
-            color: white; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 500;
-        }
-        .logo a {
-            font-size: 1.6rem;
-        }
-        .navbutton1, .navbutton2 {
-            display: inline-block; padding-left: 30px; font-size: 1.5rem;
-        }
-        .hero {
-            background-color: #75b2dd; padding-top: 50px; padding-bottom: 50px;
-        }
-        .hero h1 {
-            color: white; font-size: 2.25rem; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; margin-left: 30px;
-        }
-        .hero p {
-            color: white; font-size: 1.15rem; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: italic; margin-left: 28px; margin-top: -10px;
-        }
-        .aboutme {
-            background-color: white; padding-top: 12.5px; padding-bottom: 12.5px;
-        }
-        .aboutme h2 {
-            color: #174785; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; margin-left: 30px;
-        }
-        hr {
-            margin-left: 30px; margin-right: 30px;
-        }
-        .aboutme p {
-            color: #174785; margin-left: 30px; margin-right: 30px;
-        }
-        .projects {
-            background-color: #f1f6fb; padding-top: 12.5px; padding-bottom: 12.5px;
-        }
-        .projects h2 {
-            color: #174785; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; margin-left: 30px;
-        }
-        .projects img {
-            width: 100%; height: 100%;
-        }
-        .container {
-            margin-left: 30px; margin-right: 30px;
-        }
-        .carousel-track {
-            display: flex; justify-content: space-evenly;
-        }
-        .project-slide {
-            display: flex; justify-content: center; align-items: center; flex: 0 0 43%; height: 320px;
-            transition: all 0.3s ease-in-out; cursor: pointer; position: relative; overflow: hidden;
-        }
-        .project-slide.displaySlide {
-            flex: 0 0 50%; box-shadow: 0 0 10px #000000d9;
-        }
-        .project-description {
-            background-color: #000000d9; font-size: 1.25rem; position: absolute; bottom: 0; left: 0; right: 0; padding-left: 10px; padding-top: 7.5px; 
-            padding-bottom: 7.5px; transform: translateY(100%); transition: transform 0.3s ease-in-out;
-        }
-        .project-description a {
-            color: white;
-        }
-        .project-slide.displaySlide .project-description {
-            transform: translateY(0);
-        }
-        .carousel-nav {
-            display: flex; justify-content: center; margin-top: 20px;
-        }
-        .nav-dot {
-            background-color: #75b2dd; margin-right: 8px; border-radius: 50%; width: 12px; height: 12px; cursor: pointer; 
-            transition: background-color 0.3s ease;
-        }
-        .nav-dot.displayDot {
-            background-color: #174785;
-        }
-        footer {
-            background-color: #174785; padding-top: 12.5px; padding-bottom: 30px; padding-left: 30px;
-        }
-        footer h3 {
-            color: white; font-size: 1.3rem;
-        }
-        footer a {
-            color: white; font-size: 1.1rem;
-        }
-    </style>
-
-    <style media="screen and (min-width:1440px)">
-        .navbar {
-            padding-top: 20px; padding-bottom: 20px;
-        }
-        .navdiv {
-            margin-left: 40px; margin-right: 40px;
-        }
-        .logo a {
-            font-size: 2rem;
-        }
-        .navbutton1, .navbutton2 {
-            font-size: 1.9rem; padding-left: 55px;
-        }
-        .hero {
-            padding-top: 75px; padding-bottom: 75px;
-        }
-        .hero h1 {
-            font-size: 2.65rem; margin-left: 40px;
-        }
-        .hero p {
-            font-size: 1.55rem; margin-left: 36px;
-        }
-        .aboutme {
-            padding-top: 17.5px; padding-bottom: 25px;
-        }
-        .aboutme h2 { 
-            font-size: 2rem; margin-left: 40px;
-        }
-        hr {
-            margin-left: 40px; margin-right: 40px;
-        }
-        .aboutme p {
-            font-size: 1.4rem; margin-left: 40px; margin-right: 40px;
-        }
-        .projects {
-            padding-top: 17.5px;
-        }
-        .projects h2 {
-            font-size: 2rem; margin-left: 40px;
-        }
-        .project-slide {
-            flex: 0 0 45%; height: 460px;
-        }
-        .container {
-            margin-left: 60px; margin-right: 60px;
-        }
-        .project-slide.displaySlide {
-            flex: 0 0 52%;
-        }
-        .project-description {
-            font-size: 1.75rem; padding-left: 15px; padding-top: 10px; padding-bottom: 10px;
-        }
-        .nav-dot {
-            width: 16px; height: 16px;
-        }
-        footer {
-            padding-left: 40px; padding-bottom: 40px;
-        }
-        footer h3 {
-            font-size: 1.7rem;
-        }
-        footer a {
-            font-size: 1.5rem;
-        }
-    </style>
-
-    <style media="screen and (min-width:2560px)">
-        .navbar {
-            padding-top: 40px; padding-bottom: 40px;
-        }
-        .navdiv {
-            margin-left: 75px; margin-right: 75px;
-        }
-        .logo a {
-            font-size: 3.5rem;
-        }
-        .navbutton1, .navbutton2 {
-            font-size: 3.4rem; padding-left: 100px;
-        }
-        .hero {
-            padding-top: 125px; padding-bottom: 125px;
-        }
-        .hero h1 {
-            font-size: 4.15rem; margin-left: 75px;
-        }
-        .hero p {
-            font-size: 3.05rem; margin-left: 55px;
-        }
-        .aboutme {
-            padding-top: 25px; padding-bottom: 50px;
-        }
-        hr {
-            border-width: 5px; margin-left: 75px; margin-right: 75px;
-        }
-        .aboutme h2 {
-            font-size: 3.5rem; margin-left: 75px;
-        }
-        .aboutme p {
-            font-size: 2.9rem; margin-left: 75px; margin-right: 75px;
-        }
-        .projects {
-            padding-top: 25px; padding-bottom: 50px;
-        }
-        .projects h2 {
-            font-size: 3.5rem; margin-left: 75px;
-        }
-        .project-slide {
-            height: 870px;
-        }
-        .project-description {
-            font-size: 3rem; padding-left: 25px; padding-top: 15px; padding-bottom: 15px;
-        }
-        .nav-dot {
-            margin-top: 25px; width: 30px; height: 30px;
-        }
-        footer {
-            padding-left: 75px; padding-bottom: 75px;
-        }
-        footer h3 {
-            font-size: 3.2rem;
-        }
-        footer a {
-            font-size: 3rem;
-        }
-    </style>
+  	<!-- Load additional fonts to be fancy :D -->
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
-    <div class="sml-screen">
-	<!--
-        <header>
-            <nav>
-                <div class="logodiv">
-                    <div class="logo"><a href="#">Marcos Enrique Mancia Jr.</a></div>
-                    <p>Columbia Student | Computer Engineer</p>
-                </div>
 
-                <div class="adiv">
-                    <a href="resume.html">Resumé</a>
-                    <a href="project.html">Projects</a>
-                </div>
-            </nav>
-        </header>
+  	<!-- ######## Header ######## -->
+  	<header class="hero">
+    		<h1>Marcos E. Mancia Jr.</h1>
+    		<p class="subtitle">Junior @ Columbia University / Computer Engineer</p>
 
-        <div class="aboutme">
-            <h2>About Me</h2>
-            <hr>
-            <p>
-                Hello! My name is Marcos Mancia, and I was born and raised in Southern California. Being one of four children growing up, I was constantly 
-                surrounded by energy, creativity, and a spirit of collaboration. This (tad bit chaotic) environment fostered my passion for problem-solving 
-                and innovation, ultimately leading me to pursue the field of Computer Engineering at Columbia University! My academic journey thus far has 
-                been both challenging and incredibly exciting, providing me with a deep understanding of computer systems, software development, and my 
-                favorite, electronics. At Columbia specifically, I’ve had the amazing opportunity to work on a variety of intriguing projects, from designing 
-                complex circuits for signal processing to developing programs that implement data structures from scratch. These experiences together sparked 
-                a keen interest within me in the subfield of Embedded Systems! Outside of my academics, I spend much of my time pursuing my faith as a 
-                Christian. My belief is an integral part of my identity, guiding my values and driving me to make meaningful contributions to my community 
-                and society as a whole. It provides me with a strong moral foundation and motivates me to give my best effort in all of my endeavors for the 
-                glory of God. As I look ahead to the future, I am enthusiastic about the unique opportunities that will arise. 
-                Much love and respect, and God bless!
+    		<nav>
+      			<a href="#about">About</a>
+      			<a href="#projects">Projects</a>
+      			<a href="#contact">Contact</a>
+      			<a href="resume.pdf" target="_blank">Resumé</a>
+    		</nav>
 
-            </p>
-        </div>
-	-->
-	<div class="editDiv">
-            <h1 class="editH1">Currently working on a design for the mobile website view! Please view this website on a laptop! :D</h1>
-        </div>
-    </div>
+  	</header>
 
-    <div class="lrg-screen">
-        <header>
-            <nav class="navbar">
-                <div class="navdiv">
-                    <div class="logo"><a href="#">Marcos Enrique Mancia Jr.</a></div>
-                    <ul>
-                        <li class="navbutton1"><a href="resume.html">Resumé</a></li>
-                        <li class="navbutton2"><a href="projects.html">Projects</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+  	<!-- ######## About ######## -->
+  	<section id="about" class="section fade-in">
+    		<h2>About Me</h2>
+    		<p>
+		I am a third-year Computer Engineering student at Columbia University with a focus on low-level programming and embedded systems. I am interested in building reliable software that operates close to hardware, and I am currently developing hands-on projects to strengthen my systems experience. I am seeking opportunities in robotics, embedded systems, or low-level programming.
+    		</p>
+  	</section>
 
-        <div class="hero">
-            <h1>Welcome to Marcos' Portfolio!</h1>
-            <p>Columbia Student | Computer Engineer</p>
-        </div>
+  	<!-- ######## Projects ######## -->
+  	<section id="projects" class="section fade-in">
+    		<h2>Projects</h2>
 
-        <div class="aboutme">
-            <h2>About Me</h2>
-            <hr>
-            <p>
-                Hello! My name is Marcos Mancia, and I was born and raised in Southern California. Being one of four children growing up, I was constantly 
-                surrounded by energy, creativity, and a spirit of collaboration. This (tad bit chaotic) environment fostered my passion for problem-solving 
-                and innovation, ultimately leading me to pursue the field of Computer Engineering at Columbia University! My academic journey thus far has 
-                been both challenging and incredibly exciting, providing me with a deep understanding of computer systems, software development, and my 
-                favorite, electronics. At Columbia specifically, I’ve had the amazing opportunity to work on a variety of intriguing projects, from designing 
-                complex circuits for signal processing to developing programs that implement data structures from scratch. These experiences together sparked 
-                a keen interest within me in the subfield of Embedded Systems! Outside of my academics, I spend much of my time pursuing my faith as a 
-                Christian. My belief is an integral part of my identity, guiding my values and driving me to make meaningful contributions to my community 
-                and society as a whole. It provides me with a strong moral foundation and motivates me to give my best effort in all of my endeavors for the 
-                glory of God. As I look ahead to the future, I am enthusiastic about the unique opportunities that will arise. 
-                Much love and respect, and God bless!
+    		<div class="project-grid">
 
-            </p>
-        </div>
+      			<div class="project-card">
+	      		<h3>Sorting Algorithm Visualizer</h3>
+        		<p>
+        			This project visualizes many common sorting algorithms along with their time complexities and implementations.
+			</p>
+        		<a href="https://github.com/Jinnboi/SortingAlgorithmVisualizer" target="_blank">View Project →</a>
+      			</div>
 
-        <div class="projects">
-            <h2>Recent Projects</h2>
-            <hr>
-            
-            <div class="container">
-                <div class="carousel-track">
-                    <div class="project-slide">
-                        <img src="images/sav.png" alt="Sorting Algorithm Visualizer Panel">
-                        <div class="project-description"><a href="https://github.com/Jinnboi/SortingAlgorithmVisualizer?tab=readme-ov-filei">Sorting Algorithm Visualizer</a></div>
-                    </div>
-                    <div class="project-slide">
-                        <img src="images/nn.png" alt="Neural Network">
-                        <div class="project-description"><a href="https://github.com/Jinnboi/MyNeuralNetwork">Neural Network</a></div>
-                    </div>
-                </div>
-                <div class="carousel-nav">
-                    <div class="nav-dot"></div>
-                    <div class="nav-dot"></div>
-                </div>
-            </div>
-        </div>
+      			<div class="project-card">
+        		<h3>Guhtar Champion (W.I.P.)</h3>
+        		<p>
+          			This project mimics the popular arcade game "Guitar Hero" using a microcontroller and supporting devices.
+        		</p>
+      			</div>
 
-        <footer>
-            <h3>Contact Me:</h3>
-            <a href="mailto:marcosmancia77@gmail.com" class="contact">Email | </a>
-            <a href="https://github.com/Jinnboi" class="contact">Github | </a>
-            <a href="https://app.joinhandshake.com/profiles/53049844" class="contact">HandShake | </a>
-            <a href="https://www.linkedin.com/in/marcos-mancia-658732292/" class="contact">LinkedIn</a>
-        </footer>
+    		</div>
+  	</section>
 
-        <script>
-            const slides = document.querySelectorAll('.project-slide');
-            const dots = document.querySelectorAll('.nav-dot');
-            let currentSlide = 0;
-            let intervalId = null;
+  	<!-- ######## Contact ######## -->
+  	<section id="contact" class="section fade-in">
+    		<h2>Contact</h2>
+    		<p>
+      			Email: <a href="mailto:marcosmancia77@gmail.com">marcosmancia77@gmail.com</a>
+    		</p>
+    		<p>
+      			GitHub: <a href="https://github.com/jinnboi" target="_blank">github.com/jinnboi</a>
+    		</p>
+    		<p>
+      			LinkedIn: <a href="https://www.linkedin.com/in/marcos-enrique-mancia-jr/" target="_blank">Marcos E. Mancia Jr.</a>
+    		</p>
+  	</section>
 
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                    slide.classList.toggle('displaySlide', i === index);
-                });
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('displayDot', i === index);
-                });
-                currentSlide = index;
-            }
+  	<!-- ######## Footer ####### -->
+  	<footer>
+    		<p>Last Updated: Jan. 2026</p>
+  	</footer>
 
-            function nextSlide() {
-                showSlide((currentSlide + 1) % slides.length);
-            }
-
-            function startInterval() {
-                intervalId = setInterval(nextSlide, 5000); // Change slide every 3 seconds
-            }
-
-            function stopInterval() {
-                if (intervalId) {
-                    clearInterval(intervalId);
-                    intervalId = null;
-                }
-            }
-
-            function handleInteraction(index) {
-                stopInterval();
-                showSlide(index);
-            }
-
-            slides.forEach((slide, index) => {
-                slide.addEventListener('click', () => handleInteraction(index));
-            });
-
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => handleInteraction(index));
-            });
-
-            // Initialize the first slide as active and start the interval
-            showSlide(0);
-            startInterval();
-        </script>
-    </div>
+  	<script src="script.js"></script>
 </body>
 </html>
+
